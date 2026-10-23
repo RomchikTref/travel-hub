@@ -29,6 +29,13 @@ navLink.forEach(link => {
 
 /*=============== ADD BLUR HEADER ===============*/
 
+const scrollHeader = () => {
+    const header = document.getElementById('header');
+    window.scrollY >= 10 ? header.classList.add('blur-header')
+                       : header.classList.remove('blur-header');
+}
+
+window.addEventListener('scroll', scrollHeader);
 
 /*=============== GSAP ANIMATION ===============*/
 

@@ -37,7 +37,31 @@ const scrollHeader = () => {
 
 window.addEventListener('scroll', scrollHeader);
 
-/*=============== GSAP ANIMATION ===============*/
+/*=============== BG  SHOW-ANIMATION ===============*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const animItems = document.querySelectorAll('.home__anim-item');
+    console.log(animItems);
+
+    animItems.forEach(item => {
+        
+        const direction = item.dataset.direction;
+
+        const delay = Number(item.dataset.delay) * 500 || 0;
+
+        console.log(delay);
+        setTimeout(() => {
+            if (direction == 'bottom') {
+                item.classList.add('from-bottom');
+            }
+            else if (direction == 'right') {
+                item.classList.add('from-right');
+            }
+        }, delay);
+
+    })
+})
 
 
 /*=============== SAKURA ANIMATION ===============*/

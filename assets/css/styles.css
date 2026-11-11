@@ -403,11 +403,6 @@ img {
     display: grid;
   }
 
-  .home__images{
-    max-height: 100vh;
-    max-width: 100vw;
-  }
-
   .home__data{
     align-self: center;
     left: 20rem;  

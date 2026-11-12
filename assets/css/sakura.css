@@ -1,0 +1,27 @@
+.petal {
+  position: absolute;
+  top: -20px;
+  border-radius: 150% 0 150% 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 183, 197, 0.9),
+    rgba(255, 197, 208, 0.9)
+  );
+  pointer-events: none;
+  animation: fall linear forwards;
+  z-index: 1000;
+}
+
+@keyframes fall{
+    0%{
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    50%{
+        transform: translate(50px, 50vh) rotate(120deg);
+    }
+    100%{
+        transform: translate(-30px, 105vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}

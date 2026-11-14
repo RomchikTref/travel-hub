@@ -41,7 +41,7 @@ window.addEventListener('scroll', scrollHeader);
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    const animItems = document.querySelectorAll('.home__anim-item');
+    const animItems = document.querySelectorAll('.anim-item');
     console.log(animItems);
 
     animItems.forEach(item => {
@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             else if (direction == 'right') {
                 item.classList.add('from-right');
+            }
+            else if (direction == 'top') {
+                item.classList.add('from-top');
+            }
+            else if (direction == 'bounce') {
+                item.classList.add('slideBounce');
             }
         }, delay);
 
